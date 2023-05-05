@@ -1,0 +1,76 @@
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+  color: #fff;
+  font-size: 0.85em;
+  transform: translateY(-34px);
+}
+
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i {
+  height: 44px;
+}
+
+.box form .Links a:nth-child(2) {
+  color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(100 116 139 / var(--tw-bg-opacity)) inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
+.box::before {
+  content: " ";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    rgb(79 70 229),
+    rgb(79 70 229),
+    rgb(79 70 229)
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 8s linear infinite;
+}
+
+.box::after {
+  content: " ";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    rgb(79 70 229),
+    rgb(79 70 229),
+    rgb(79 70 229)
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 8s linear infinite;
+  animation-delay: -4s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
